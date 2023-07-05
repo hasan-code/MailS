@@ -53,7 +53,7 @@
     use, modify, and distribute this software.</p>
 
   <h2>Contact</h2>
-  <p>For any inquiries or further information, please contact <strong>Your Name</strong> at
+  <p>For any inquiries or further information, please contact <strong>Hasan Al Saeed</strong> or <a href="https://github.com/hasan-code">hasan-code</a> at
     <a href="mailto:heyy.hxn@gmail.com">heyy.hxn@gmail.com</a>.</p>
 </body>
 
