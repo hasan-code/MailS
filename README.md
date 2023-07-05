@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>MailS - Online Mass Mail Dispatcher Service</title>
-</head>
-
 <body>
   <h1>MailS - Online Mass Mail Dispatcher Service</h1>
 
