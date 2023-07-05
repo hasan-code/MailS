@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+
+    <title>MailS | Mass Mail Dispatcher</title>
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Body Container -->
+    <div class="container">
+      <!-- Left Side -->
+      <div class="left">
+        <div class="title">
+          <h3>Welcome to MailS !</h3>
+          <p>A Mass-Mail Dispatcher service.</p>
+        </div>
+        <!-- Form - To upload CSV files -->
+        <form
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          id="upload-file-form"
+        >
+          <div class="input-group">
+            <div id="info">
+              <img src="./assets/icons/upload-icon.svg" alt="Upload icon" />
+              <p>Choose your csv file to upload.</p>
+            </div>
+
+            <br />
+
+            <input type="file" name="file" id="file" accept=".csv" />
+
+            <br />
+
+            <input
+              type="button"
+              class="btn"
+              value="Upload"
+              onclick="processCSVFile()"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Side -->
+      <div class="right">
+        <div class="img">
+          <img src="./assets/icons/mailS.svg" alt="mailS icon" />
+        </div>
+
+        <br />
+
+        <!-- Form - Mail -->
+        <form
+          autocomplete="off"
+          onsubmit="sendEmails(); reset(); return false;"
+        >
+          <h3>Welcome!</h3>
+          <p>Please fill correct details in the form.</p>
+          <br />
+          <div class="input-group">
+            <input
+              type="email"
+              name="from"
+              id="from"
+              class="input"
+              placeholder=" "
+              required
+            />
+            <label for="from" class="placeholder">From</label>
+          </div>
+
+          <br />
+
+          <!-- <div class="input-group">
+            <input
+              type="email"
+              name="to"
+              id="to"
+              class="input"
+              placeholder=" "
+              required
+            />
+            <label for="to" class="placeholder">To</label>
+          </div>
+
+          <br /> -->
+
+          <div class="input-group">
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              class="input"
+              placeholder=" "
+              required
+            />
+            <label for="subject" class="placeholder">Subject</label>
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <textarea
+              name="message"
+              id="message"
+              class="input"
+              placeholder=" "
+              required
+            ></textarea>
+            <label for="message" class="placeholder">Message</label>
+          </div>
+
+          <br />
+
+          <button type="submit">Send Mail</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Email Valid & Invalid List Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <div class="left">
+          <p class="title">
+            Valid Email Lists :&nbsp;&nbsp;&nbsp;<span
+              id="valid-emails-count"
+              style="color: black"
+            ></span>
+          </p>
+          <div id="valid-emails"></div>
+        </div>
+
+        <span id="separator"></span>
+
+        <div class="right">
+          <p class="title">
+            Invalid Email Lists :&nbsp;&nbsp;&nbsp;<span
+              id="invalid-emails-count"
+              style="color: black"
+            ></span>
+          </p>
+          <div id="invalid-emails"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT LINK -->
+    <script type="text/javascript" src="./app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>

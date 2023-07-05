@@ -1,0 +1,577 @@
+/* -----GOOGLE FONTS----- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* -----VARIABLES----- */
+:root {
+  --accent-clr: #f16c6c;
+  --dark-accent-clr: #f05d5d;
+  --white: #ffffff;
+  --txt-clr-dark: #000c1a;
+  --txt-clr-light: #3a3a3a;
+  --border-radius: 0.6rem;
+}
+
+/* -----Resetting default html----- */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  /* background: #0076FF;
+background: linear-gradient(225deg, #0076FF, #006FEC); */
+
+  /* background: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
+    background-blend-mode: overlay, lighten, overlay, color-burn, normal; */
+}
+
+/* -----BODY CONTAINER----- */
+.container {
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  /* background-color: #00ffd1; */
+  /* border-radius: var(--border-radius); */
+}
+
+/* .container .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* -----BODY CONTAINER : LEFT SIDE----- */
+.container .left {
+  padding: 13rem 5rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/images/bg-10.jpeg");
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.container .left .title {
+  padding: 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 32px;
+  background-color: rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: var(--border-radius);
+}
+
+.container .left .title h3 {
+  font-size: 1.351rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--white);
+}
+
+.container .left .title p {
+  font-size: 0.913rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--txt-clr-light);
+}
+
+.container .left form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .left form .input-group {
+  padding: 1.5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px dashed #ffebeb;
+  border-radius: var(--border-radius);
+}
+
+.container .left form .input-group #info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .left form .input-group #info img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.container .left form .input-group #info p {
+  font-size: 0.931rem;
+  font-weight: 500;
+  text-align: center;
+  color: #ffebeb;
+}
+
+.container .left form .input-group input {
+  padding: 0.7rem 1rem;
+  min-width: 65%;
+  max-width: 80%;
+  background: var(--white);
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+.container .left form .input-group input::file-selector-button {
+  padding: 0.6rem;
+  background: #7e7e7e;
+  border-radius: 0.4rem;
+  outline: none;
+  color: var(--white);
+  font-size: 0.831rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.container .left form .input-group input::file-selector-button:hover {
+  background: var(--txt-clr-light);
+  cursor: pointer;
+}
+
+/* .container .left form .input-group #uploaded-file {
+    padding: 0.3rem 0.5rem;
+    width: fit-content;
+    background-color: #3a3a3a;
+    border-radius: 0.3rem;
+    font-size: 0.579rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white);
+} */
+
+/* .container .left form .input-group input {
+  display: none;
+} */
+
+.container .left form .input-group .btn {
+  padding: 0.7rem 1.5rem;
+  background: var(--white);
+  border-radius: 0.4rem;
+  outline: none;
+  color: var(--dark-accent-clr);
+  font-size: 0.831rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.container .left form .input-group .btn:hover {
+  background: #fff9f9;
+  cursor: pointer;
+}
+
+/* -----BODY CONTAINER : RIGHT SIDE----- */
+.container .right {
+  padding: 13% 11%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  /* background-color: antiquewhite; */
+}
+
+.container .right .img {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .right .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container .right form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .right form h3 {
+  font-size: 1.313rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--txt-clr-dark);
+  line-height: 40px;
+}
+
+.container .right form p {
+  font-size: 0.931rem;
+  font-weight: 500;
+  text-align: center;
+  color: #bebebe;
+}
+
+.container .right form .input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .right form .input-group .input {
+  width: 100%;
+  padding: 10px;
+  color: var(--txt-clr-dark);
+  font-size: 0.851rem;
+  font-weight: 400;
+  background: var(--white);
+  border-radius: 0.4rem;
+  outline: none;
+  border: 2px solid #eaeaea;
+  /* border: 2px solid var(--accent-clr); */
+}
+
+.container .right form .input-group textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 250px;
+  font-family: "Montserrat", sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.container .right form .input-group .placeholder {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  padding: 0px 5px;
+  color: #7a7a7a;
+  font-size: 0.831rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  pointer-events: none;
+}
+
+.container .right.input-group .input:focus {
+  caret-color: var(--txt-clr-dark);
+}
+
+.container .right form .input-group .input:focus + .placeholder,
+.container
+  .right
+  form
+  .input-group
+  .input:not(:placeholder-shown)
+  + .placeholder {
+  top: -8px;
+  font-size: 0.791rem;
+  background-color: var(--white);
+  color: #bebebe;
+}
+
+.container .right form button {
+  padding: 0.8rem;
+  width: 100%;
+  background: var(--accent-clr);
+  border-radius: 0.4rem;
+  outline: none;
+  color: var(--white);
+  font-size: 0.831rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.container .right form button:hover {
+  background: var(--dark-accent-clr);
+  cursor: pointer;
+}
+
+/* -----Email Valid & Invalid List Modal----- */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  /* overflow: auto; */
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  overflow: hidden;
+}
+
+.modal .modal-content {
+  padding: 1.5rem;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.modal .modal-content .left,
+.modal .modal-content .right {
+  width: 50%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.modal .modal-content .left .title,
+.modal .modal-content .right .title {
+  font-size: 0.931rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--dark-accent-clr);
+}
+
+.modal .modal-content .left #valid-emails,
+.modal .modal-content .right #invalid-emails {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  font-size: 0.791rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--txt-clr-dark);
+  line-height: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal .modal-content #separator {
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(76, 76, 76, 0) 0%,
+    rgba(76, 76, 76, 0.5) 49.96%,
+    rgba(76, 76, 76, 0) 100%
+  );
+}
+
+/* -----X-Small devices----- */
+@media (max-width: 600px) {
+  /* -----BODY CONTAINER----- */
+  .container {
+    flex-direction: column;
+  }
+
+  /* -----BODY CONTAINER : LEFT SIDE----- */
+  .container .left {
+    padding: 9rem 1.5rem 3rem;
+    width: 100%;
+    height: fit-content;
+    gap: 1.5rem;
+  }
+
+  .container .left .title {
+    padding: 0.7rem 1.5rem;
+    line-height: 20px;
+  }
+
+  .container .left .title h3 {
+    font-size: 1rem;
+  }
+
+  .container .left .title p {
+    font-size: 0.751rem;
+  }
+
+  .container .left form .input-group {
+    padding: 1rem 0;
+    gap: 0rem;
+  }
+
+  .container .left form .input-group #info img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .container .left form .input-group #info p {
+    font-size: 0.751rem;
+  }
+
+  .container .left form .input-group input {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+  }
+
+  .container .left form .input-group input::file-selector-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.731rem;
+  }
+
+  .container .left form .input-group button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.731rem;
+  }
+
+  /* -----BODY CONTAINER : RIGHT SIDE----- */
+  .container .right {
+    padding: 3rem 1.5rem;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .container .right form h3 {
+    font-size: 1rem;
+    line-height: 24px;
+  }
+
+  .container .right form p {
+    font-size: 0.751rem;
+  }
+
+  .container .right form .input-group .input {
+    font-size: 0.731rem;
+  }
+
+  .container .right form .input-group .placeholder {
+    font-size: 0.713rem;
+  }
+
+  .container .right form .input-group .input:focus + .placeholder,
+  .container
+    .right
+    form
+    .input-group
+    .input:not(:placeholder-shown)
+    + .placeholder {
+    font-size: 0.691rem;
+  }
+
+  .container .right form button {
+    font-size: 0.731rem;
+  }
+
+  /* -----Email Valid & Invalid List Modal----- */
+  .modal .modal-content {
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modal .modal-content .left,
+  .modal .modal-content .right {
+    width: 100%;
+    max-height: 50%;
+  }
+
+  .modal .modal-content #separator {
+    display: none;
+  }
+}
+
+/* -----Small devices & Medium devices----- */
+@media (min-width: 601px) and (max-width: 992px) {
+  /* -----BODY CONTAINER : LEFT SIDE----- */
+  .container .left {
+    padding: 13% 3%;
+  }
+
+  .container .left form .input-group {
+    gap: 0;
+  }
+
+  .container .left form .input-group #info img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .container .left form .input-group input::file-selector-button {
+    padding: 0.6rem;
+  }
+
+  /* -----BODY CONTAINER : RIGHT SIDE----- */
+  .container .right {
+    padding: 13% 7%;
+  }
+
+  /* -----Email Valid & Invalid List Modal----- */
+  .modal .modal-content {
+    width: 90%;
+    gap: 1rem;
+  }
+}
